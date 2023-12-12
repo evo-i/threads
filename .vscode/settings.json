@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.in": "cpp",
+    "time.h": "c"
+  }
+}
