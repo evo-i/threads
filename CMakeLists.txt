@@ -63,6 +63,13 @@ if (BUILD_SHARED_LIBS)
       -DEVO_THREADS_DLL_EXPORTS)
 endif (BUILD_SHARED_LIBS)
 
+
+if (HAVE_PTHREAD)
+  target_compile_definitions (threads
+    PUBLIC
+      -DHAVE_PTHREAD)
+endif ()
+
 if (HAVE_STRUCT_TIMESPEC)
   target_compile_definitions(threads
     PUBLIC

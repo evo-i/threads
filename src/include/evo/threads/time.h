@@ -8,6 +8,7 @@ extern "C" {
 #endif /* __cplusplus */
 
 #include <time.h>
+#include "exports.h"
 
 /*---------------------------- macros ---------------------------*/
 
@@ -34,6 +35,7 @@ struct timespec {
 #ifndef HAVE_TIMESPEC_GET
 /*-------------------- 7.25.7 Time functions --------------------*/
 // 7.25.6.1
+EVO_THREADS_API
 int
 timespec_get(struct timespec *ts, int base);
 #endif
